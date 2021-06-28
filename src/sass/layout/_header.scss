@@ -1,3 +1,70 @@
 /* ********* */
 /* @HEADER */
 /* ********* */
+
+// HEADER
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [navegador]50px [banner]500px;
+    grid-template-areas:
+        "navegador"
+        "banner";
+}
+
+// MENU
+// ********************************
+
+// SMARTPHONE
+#menu-smartphone {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "menu logo .";
+    input,
+    .desplegable {
+        display: none;
+    }
+    // clic
+    input:checked ~ .desplegable {
+        display: grid;
+        background-color: grey;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 50px);
+        padding: 5rem;
+        justify-items: center;
+    }
+    .logo {
+        grid-area: logo;
+        justify-self: center;
+    }
+    .menuH {
+        grid-area: menu;
+    }
+}
+
+// DESKTOP
+#menu-desktop {
+    display: none;
+}
+
+// MQ (media query's)
+@media only screen and (min-width: 60rem) {
+    // SAMRTPHONE
+    #menu-smartphone {
+        display: none;
+    }
+
+    // DESKTOP
+    #menu-desktop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            margin: 0 1rem;
+        }
+    }
+}
