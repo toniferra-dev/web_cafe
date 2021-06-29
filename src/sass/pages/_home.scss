@@ -5,6 +5,8 @@
 body{
     display: flex;
     justify-content: center;
+
+
 }
 
 .contenedor{
@@ -16,6 +18,7 @@ body{
     "main"
     "footer"
     ;
+    grid-gap: 2rem;
 }
 header{
     grid-area: header;
@@ -25,4 +28,29 @@ main{
 }
 footer{
     grid-area: footer;
+}
+
+
+// MAIN
+// ****************************
+
+main{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    @media only screen and (min-width: 60rem){
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    
+    figure{
+        width: 80%;
+        
+        picture img{
+            width: 100%; 
+        }
+        figcaption{
+            
+        }
+    }
 }

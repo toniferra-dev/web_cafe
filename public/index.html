@@ -1,41 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-    <div class="contenedor">
-        <!-- HEADER -->
-        <header>
-            <!-- menu SMARTPHONE -->
-            <nav id="menu-smartphone">
-                <img class="logo" src="./assets/img/svg/logo.svg" alt="logo web cafe" />
-                <input type="checkbox" id="clic" />
-                <label for="clic">
-                    <img loading="lazy" class="menuH" src="./assets/img/svg/menu.svg" alt="icono menu" />
-                </label>
-                <ul class="desplegable">
-                    <a href="#">Servicios</a>
-                    <a href="#">Galeria</a>
-                </ul>
-            </nav>
-            <!-- menu DESKTOP -->
-            <nav id="menu-desktop">
-                <a href="#">Servicios</a>
-                <img loading="lazy" src="./assets/img/svg/logo.svg" alt="logo web cafe" />
-                <a href="#">Galeria</a>
-            </nav>
-            <!-- BANNER -->
-            <div class="banner"></div>
-        </header>
-        <!-- MAIN -->
-        <main></main>
-        <!-- FOOTER -->
-        <footer></footer>
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+    <body>
+        <div class="contenedor">
+            <!-- HEADER -->
+            <header>
+                <!-- menu SMARTPHONE -->
+                <nav id="menu-smartphone">
+                    <img
+                        class="logo"
+                        src="./assets/img/svg/logo.svg"
+                        alt="logo web cafe"
+                    />
+                    <input type="checkbox" id="clic" />
+                    <label for="clic">
+                        <img
+                            loading="lazy"
+                            class="menuH"
+                            src="./assets/img/svg/menu.svg"
+                            alt="icono menu"
+                        />
+                    </label>
+                    <ul class="desplegable">
+                        <a href="servicios.html">Servicios</a>
+                        <a href="galeria.html">Galeria</a>
+                        <a href="contactar.html">Contactar</a>
+                    </ul>
+                </nav>
+                <!-- menu DESKTOP -->
+                <nav id="menu-desktop">
+                    <a href="servicios.html">Servicios</a>
+                    <img
+                        loading="lazy"
+                        src="./assets/img/svg/logo.svg"
+                        alt="logo web cafe"
+                    />
+                    <a href="galeria.html">Galeria</a>
+                </nav>
+
+                <!-- BANNER -->
+                <div class="banner">
+                    <picture>
+                        <!-- smartphone -->
+                        <source
+                            srcset="
+                                ./assets/img/smartphone/slider.jpg    1x,
+                                ./assets/img/smartphone/slider@2x.jpg 2x,
+                                ./assets/img/smartphone/slider@3x.jpg 3x
+                            "
+                            media="(min-width: 20em) and (orientation:portrait)"
+                        />
+                        <!-- desktop -->
+                        <source
+                            srcset="
+                                ./assets/img/desktop/slider.jpg    1x,
+                                ./assets/img/desktop/slider@2x.jpg 2x
+                            "
+                            media="(min-width: 60em)"
+                        />
+                        <img src="" alt="cafeteria" />
+                    </picture>
+                </div>
+                <!-- LINK ANCLA -->
+                <a class="flecha" href="#abajo">
+                    <img src="./assets/img/svg/icon_bottom.svg" alt="">
+                </a>
+            </header>
+            <!-- MAIN y ancla -->
+            <main id="abajo">
+                <!-- Turquesa -->
+                <figure>
+                    <!-- img -->
+                    <picture>
+                        <!-- smartphone -->
+                        <source
+                            srcset="
+                                ./assets/img/smartphone/tazaCafeTurquesa.jpg    1x,
+                                ./assets/img/smartphone/tazaCafeTurquesa@2x.jpg 2x,
+                                ./assets/img/smartphone/tazaCafeTurquesa@3x.jpg 3x
+                            "
+                            media="(min-width:20em) and (orientation:portrait)"
+                        />
+                        <!-- desktop -->
+                        <source
+                            srcset="
+                                ./assets/img/desktop/tazaCafeTurquesa.jpg    1x,
+                                ./assets/img/desktop/tazaCafeTurquesa@2x.jpg 2x
+                            "
+                            media="(min-width:60em)"
+                        />
+                        <img src="" alt="cafe fondo celeste" />
+                    </picture>
+                    <!-- text -->
+                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh elit tellus, vestibulum senectus venenatis semper justo. </figcaption>
+                </figure>
+                <!-- Marrón -->
+                <figure>
+                    <!-- img -->
+                    <picture>
+                        <!-- smartphone -->
+                        <source
+                            srcset="
+                                ./assets/img/smartphone/tazaCafeMarron.jpg    1x,
+                                ./assets/img/smartphone/tazaCafeMarron@2x.jpg 2x,
+                                ./assets/img/smartphone/tazaCafeMarron@3x.jpg 3x
+                            "
+                            media="(min-width:20em) and (orientation:portrait)"
+                        />
+                        <!-- desktop -->
+                        <source
+                            srcset="
+                                ./assets/img/desktop/tazaCafeMarron.jpg    1x,
+                                ./assets/img/desktop/tazaCafeMarron@2x.jpg 2x
+                            "
+                            media="(min-width:60em)"
+                        />
+                        <img src="" alt="taza de cafe con un fondo marron" />
+                    </picture>
+                    <!-- text -->
+                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh elit tellus, vestibulum senectus venenatis semper justo. </figcaption>
+                </figure>
+                <!-- Espuma -->
+                <figure>
+                    <!-- img -->
+                    <picture>
+                        <!-- smartphone -->
+                        <source
+                            srcset="
+                                ./assets/img/smartphone/tazaCafeEspumaDibujo.jpg    1x,
+                                ./assets/img/smartphone/tazaCafeEspumaDibujo@2x.jpg 2x,
+                                ./assets/img/smartphone/tazaCafeEspumaDibujo@3x.jpg 3x
+                            "
+                            media="(min-width:20em) and (orientation:portrait)"
+                        />
+                        <!-- desktop -->
+                        <source
+                            srcset="
+                                ./assets/img/desktop/tazaCafeEspumaDibujo.jpg    1x,
+                                ./assets/img/desktop/tazaCafeEspumaDibujo@2x.jpg 2x
+                            "
+                            media="(min-width:60em)"
+                        />
+                        <img src="" alt="cafe con espuma dibujo" />
+                    </picture>
+                    <!-- text -->
+                    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nibh elit tellus, vestibulum senectus venenatis semper justo. </figcaption>
+                </figure>
+            </main>
+
+            <!-- FOOTER -->
+            <footer>
+
+            </footer>
+        </div>
+    </body>
 </html>

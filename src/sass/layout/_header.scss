@@ -6,10 +6,21 @@
 header {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: [navegador]50px [banner]500px;
+    grid-template-rows: [navegador]50px [banner]auto [flecha]minmax(auto, 80px);
     grid-template-areas:
         "navegador"
-        "banner";
+        "banner"
+        "flecha";
+
+    // BANNER
+    .banner img {
+        width: 100%;
+    }
+    .flecha{
+        grid-area: flecha;
+        justify-self: center;
+        align-self: center;
+    }
 }
 
 // MENU
@@ -29,11 +40,12 @@ header {
         display: grid;
         background-color: grey;
         position: absolute;
+        margin: 0;
+        padding: 20%;
         top: 50px;
         left: 0;
         width: 100vw;
         height: calc(100vh - 50px);
-        padding: 5rem;
         justify-items: center;
     }
     .logo {
@@ -63,7 +75,7 @@ header {
         justify-content: center;
         align-items: center;
 
-        img{
+        img {
             margin: 0 1rem;
         }
     }
