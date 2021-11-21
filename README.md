@@ -1,6 +1,6 @@
 # Web Coffe
 
-### Tecnología
+### Tecnología del Proyecto
 - HTML5
 - CSS3 (preprocesador SASS)
 
